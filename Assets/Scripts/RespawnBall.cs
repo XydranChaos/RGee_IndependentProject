@@ -11,6 +11,6 @@ public class RespawnBall : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         player.transform.position = respawnPoint.transform.position;
-        movement.enabled = true;
+        movement.enabled = false;
     }
 }

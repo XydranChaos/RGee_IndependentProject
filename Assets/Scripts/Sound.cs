@@ -23,5 +23,9 @@ public class Sound : MonoBehaviour
             playedSound = true;
             pinSound.Play();
         }
+        else if(other.gameObject.CompareTag("Ball"))
+        {
+            pinSound.Play();
+        }
     }
 }

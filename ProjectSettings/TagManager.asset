@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bowling Pins
   - Gutter
+  - Blockade
+  - Fake Bowling Pins
+  - Ball
   layers:
   - Default
   - TransparentFX
