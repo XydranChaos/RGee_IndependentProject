@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
+
     public AudioSource pinSound;
+
     public bool playedSound = false;
 
     void Start()
@@ -23,7 +25,7 @@ public class Sound : MonoBehaviour
             playedSound = true;
             pinSound.Play();
         }
-        else if(other.gameObject.CompareTag("Ball"))
+        else if (other.gameObject.CompareTag("Ball"))
         {
             pinSound.Play();
         }

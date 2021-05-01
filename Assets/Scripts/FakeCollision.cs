@@ -5,7 +5,6 @@ using UnityEngine;
 public class FakeCollision : MonoBehaviour
 {
     public MoveForward movement;
-
     void Start()
     {
 

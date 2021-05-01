@@ -9,6 +9,8 @@ TagManager:
   - Blockade
   - Fake Bowling Pins
   - Ball
+  - Lights
+  - Music
   layers:
   - Default
   - TransparentFX

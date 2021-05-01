@@ -6,11 +6,10 @@ public class BallCollision : MonoBehaviour
 {
     // Start is called before the first frame update
     public BallMovement movement;
-    
 
     void Start()
     {
-
+        
     }
 
     void OnCollisionEnter(Collision collision)
@@ -19,6 +18,8 @@ public class BallCollision : MonoBehaviour
         {
             movement.enabled = false;
             Score.scoreAmount += 100;
+
+
         }
         if (collision.collider.tag == "Blockade")
         {

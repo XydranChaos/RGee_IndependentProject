@@ -14,6 +14,8 @@ public class GutterCollision : MonoBehaviour
         if (collision.collider.tag == "Gutter")
         {
             movement.enabled = false;
+
+
         }
 
     }

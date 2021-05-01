@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6372522902311741169}
   m_Layer: 0
   m_Name: PinkLight
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
