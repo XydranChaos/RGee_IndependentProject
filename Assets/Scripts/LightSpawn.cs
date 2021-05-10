@@ -34,4 +34,5 @@ public class LightSpawn : MonoBehaviour
                LightPrefabs[LightPrefabIndex].transform.rotation);
     }
 
+
 }

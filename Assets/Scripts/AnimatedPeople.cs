@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimatedPeople : MonoBehaviour
 {
     private BallMovement playerCtrl;
+    public GameObject person;
+    public bool moving = true;
     private Animator animPeople;
     void Start()
     {
@@ -17,13 +20,23 @@ public class AnimatedPeople : MonoBehaviour
     {
         if (playerCtrl.gameOver == false)
         {
-            animPeople.SetTrigger("Jump_trig");
-            
+            StartCoroutine(MovingAnimation());
+            animPeople.SetTrigger("Jump_trig");  
         }
         else
         {
             animPeople.SetInteger("Animation_int", 1);
+            person.SetActive(false);
+        }
+        
+        IEnumerator MovingAnimation()
+        {
+            yield return new WaitForSeconds(1);
+            moving = true;
+            person.SetActive(true);
+
         }
     }
+
         
 }
