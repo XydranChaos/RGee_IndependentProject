@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallMovement : MonoBehaviour
 {
@@ -15,10 +16,13 @@ public class BallMovement : MonoBehaviour
     public ParticleSystem hitExp;
     public ParticleSystem windSystem;
 
+    private GameManager gameManager;
+
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -39,7 +43,7 @@ public class BallMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bowling Pins") || collision.gameObject.CompareTag("Blockade") || collision.gameObject.CompareTag("Gutter"))
         {
-            Debug.Log("Game Over!");
+            gameManager.GameOver();
             gameOver = true;
             hitExp.Play();
             windSystem.Stop();
@@ -67,4 +71,8 @@ public class BallMovement : MonoBehaviour
         speed = 15;
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("RGee_IndependentProject");
+    }
 }

@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         //Loading the Main Menu
         Debug.Log("Play Game");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("RGee_IndependentProject");
     }
     public void QuitGame()
     {
